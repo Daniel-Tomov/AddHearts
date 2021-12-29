@@ -4,7 +4,7 @@ Made based off a request on the Bukkit Forums: https://bukkit.org/threads/heart-
 # Commands
 All of these require players to have the permission to use them.
 
-/heart <add|remove> (player) - initiates a duel with player specified
+/heart <add|remove> (player) - adds or removes hearts of the player specified
 
 # Permissions
 heart - base command, must have to run any others
