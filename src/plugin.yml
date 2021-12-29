@@ -1,0 +1,8 @@
+name: Hearts
+version: 1.0
+main: me.cageydinosaur.addHearts.Main
+api-version: 1.18
+commands:
+  heart:
+    usage: /heart
+    description: Command for changing amount of hearts of a player. Enter it to see usage
