@@ -45,7 +45,7 @@ public class Main extends JavaPlugin{
 	}
 	
 	public ShapedRecipe getRecipe() {
-		ItemStack item  = new ItemStack(Material.DRIED_KELP);
+		ItemStack item  = new ItemStack(Material.SUSPICIOUS_STEW);
 		NamespacedKey key = new NamespacedKey(this, "heart");
 		
 		ItemMeta meta = item.getItemMeta();

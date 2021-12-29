@@ -51,7 +51,7 @@ public class CMD implements CommandExecutor {
 					sender.sendMessage("Reloaded the config");
 					return true;
 
-				} else if (args[0].equalsIgnoreCase("add")) {
+				}else if (args[0].equalsIgnoreCase("add")) {
 					if (!(sender.hasPermission("heart.add"))) {
 						sender.sendMessage(ChatColor.RED + "You do not have permission to use that!");
 						return true;
