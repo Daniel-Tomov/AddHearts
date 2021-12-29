@@ -1,12 +1,12 @@
-#AddHearts
+# AddHearts
 Made based off a request on the Bukkit Forums: https://bukkit.org/threads/heart-recipe.494704/
 
-#Commands
+# Commands
 All of these require players to have the permission to use them.
 
 /heart <add|remove> (player) - initiates a duel with player specified
 
-#Permissions
+# Permissions
 heart - base command, must have to run any others
 
 heart.use - allows players to eat hearts, but they can still craft them
