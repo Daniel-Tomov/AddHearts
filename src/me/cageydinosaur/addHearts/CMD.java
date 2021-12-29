@@ -25,11 +25,23 @@ public class CMD implements CommandExecutor {
 		} else if (sender.hasPermission("heart")) {
 			if (args.length == 0) {
 				sender.sendMessage(ChatColor.GREEN + "Usage:");
+				if (sender.hasPermission("heart.add")) sender.sendMessage(ChatColor.GREEN + "/heart add <player> - add number of hearts a player has by 1");
+				if (sender.hasPermission("heart.remove")) sender.sendMessage(ChatColor.GREEN + "/heart remove <player> - remove number of hearts a player has by 1");
+				/*sender.sendMessage(
+						ChatColor.GREEN + "Diamond Blocks in four corners. Netherite Block top middle. Elytra bottom middle. Gold Blocks middle left and right. Totem of Undying middle.");
+				*/
 				sender.sendMessage(
-						ChatColor.GREEN + "/heart <add|remove> <player> - Change number of hearts a player has by 1");
-			} else if (args.length > 0) {
-				
-				
+						ChatColor.BLACK + "Netherite Block top middle.");
+				sender.sendMessage(
+						ChatColor.WHITE + "Elytra bottom middle.");
+				sender.sendMessage(
+						ChatColor.GOLD + "Gold Blocks middle left and right.");
+				sender.sendMessage(
+						ChatColor.GOLD + "Totem of Undying middle.");
+				sender.sendMessage(
+						ChatColor.BLUE + "Diamond Blocks in four corners.");
+				} else if (args.length > 0) {
+								
 				if (args[0].equalsIgnoreCase("reload")) {
 					if (!sender.hasPermission("heart.reload")) {
 						sender.sendMessage(ChatColor.RED + "You do not have permission to use that!");

@@ -20,9 +20,9 @@ public class Events implements Listener {
 		if (eater.hasPermission("heart.use")) {
 			if (e.getItem().getItemMeta().getCustomModelData() == 6789) {
 				eater.setMaxHealth(eater.getMaxHealth() + 2);
-			} else {
-				eater.sendMessage(ChatColor.RED + "You do not have permission to eat hearts");
-			}
+			} 
+		}else {
+			eater.sendMessage(ChatColor.RED + "You do not have permission to eat hearts");
 		}
 	}
 }
