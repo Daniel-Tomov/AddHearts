@@ -1,7 +1,7 @@
 # AddHearts
 Made based off a request on the Bukkit Forums: https://bukkit.org/threads/heart-recipe.494704/
 
-Made for Minecraft version 1.17. Not tested with other versions
+Made for Minecraft version 1.18. Not tested with other versions
 
 # Commands
 All of these require players to have the permission to use them.
