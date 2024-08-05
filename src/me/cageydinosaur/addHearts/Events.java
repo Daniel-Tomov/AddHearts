@@ -17,9 +17,9 @@ public class Events implements Listener {
 	@EventHandler
 	public void onEat(PlayerItemConsumeEvent e) {
 		Player eater = e.getPlayer();
-		if (eater.hasPermission("heart.use")) {
-			if (e.getItem().getItemMeta().hasCustomModelData()) {
-				if (e.getItem().getItemMeta().getCustomModelData() == 6789) {
+		if (e.getItem().getItemMeta().hasCustomModelData()) {
+			if (e.getItem().getItemMeta().getCustomModelData() == 6789) {
+				if (eater.hasPermission("heart.use")) {
 					eater.setMaxHealth(eater.getMaxHealth() + 2);
 				} else {
 					eater.sendMessage(ChatColor.RED + "You do not have permission to eat hearts");
