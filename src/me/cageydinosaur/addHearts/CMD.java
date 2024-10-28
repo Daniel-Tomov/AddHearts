@@ -7,6 +7,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CMD implements CommandExecutor {
 	Main plugin;
 
@@ -27,16 +30,36 @@ public class CMD implements CommandExecutor {
 				/*sender.sendMessage(
 						ChatColor.GREEN + "Diamond Blocks in four corners. Netherite Block top middle. Elytra bottom middle. Gold Blocks middle left and right. Totem of Undying middle.");
 				*/
+				List<String> recipe = Main.CONFIG.getStringList("heart.heart.recipe");
+				int lineCount = 0;
+				List<String> recipeDescPerLine = new ArrayList<>();
+				StringBuffer sb = new StringBuffer();
+				for (String recipeChild : recipe) {
+					boolean isAir = "".equals(recipeChild) || recipeChild == null;
+					if(isAir){
+						recipeChild = "*";
+					}
+					if(lineCount == 3){
+						recipeDescPerLine.add(sb.toString());
+						sb = new StringBuffer();
+						lineCount = 0;
+					}
+
+					sb.append(recipeChild).append("  ");
+					lineCount++;
+				}
 				sender.sendMessage(
-						ChatColor.BLACK + "Netherite Block top middle.");
+						ChatColor.GOLD + "==========================="
+				);
 				sender.sendMessage(
-						ChatColor.WHITE + "Elytra bottom middle.");
+						ChatColor.GOLD + "Heart Recipe(* is empty):"
+				);
+				for (String line : recipeDescPerLine) {
+					sender.sendMessage(ChatColor.BLACK + line);
+				}
 				sender.sendMessage(
-						ChatColor.GOLD + "Gold Blocks middle left and right.");
-				sender.sendMessage(
-						ChatColor.GOLD + "Totem of Undying middle.");
-				sender.sendMessage(
-						ChatColor.BLUE + "Diamond Blocks in four corners.");
+						ChatColor.GOLD + "==========================="
+				);
 				} else if (args.length > 0) {
 								
 				if (args[0].equalsIgnoreCase("reload")) {
@@ -44,8 +67,11 @@ public class CMD implements CommandExecutor {
 						sender.sendMessage(ChatColor.RED + "You do not have permission to use that!");
 						return true;
 					}
-					plugin.reloadConfig();
 					sender.sendMessage("Reloaded the config");
+					plugin.getServer().getScheduler().runTaskAsynchronously(plugin,()->{
+						plugin.loadConfig();
+						plugin.reloadRecipe();
+					});
 					return true;
 
 				}else if (args[0].equalsIgnoreCase("add")) {

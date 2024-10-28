@@ -6,3 +6,16 @@ commands:
   heart:
     usage: /heart
     description: Command for changing amount of hearts of a player. Enter it to see usage
+
+permissions:
+  heart:
+    default: true
+    children:
+      heart.use: true
+
+  heart.reload:
+    default: op
+  heart.add:
+    default: op
+  heart.remove:
+    default: op
