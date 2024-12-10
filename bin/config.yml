@@ -1,0 +1,28 @@
+---
+heart:
+  modelData: 6789
+  hide:
+    - HIDE_ENCHANTS
+  # - HIDE_ATTRIBUTES
+  # - HIDE_UNBREAKABLE
+  # - HIDE_DESTROYS
+  # - HIDE_PLACED_ON
+  # - HIDE_POTION_EFFECTS
+  # - HIDE_DYE
+  displayName: "&cHeart"
+  lore:
+    - "&bConsume this to gain an extra heart"
+    - ""
+  enchantments: # enchantment name followed by level
+    - mending,1
+  recipe:
+    - "DIAMOND_BLOCK"
+    - "NETHERITE_BLOCK"
+    - "DIAMOND_BLOCK"
+    - "GOLD_BLOCK"
+    - "TOTEM_OF_UNDYING"
+    - "GOLD_BLOCK"
+    - "DIAMOND_BLOCK"
+    - "ELYTRA"
+    - "DIAMOND_BLOCK"
+    
