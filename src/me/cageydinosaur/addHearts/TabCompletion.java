@@ -19,15 +19,19 @@ public class TabCompletion implements TabCompleter {
 	public List<String> onTabComplete(CommandSender sender, Command cmd, String label, String[] args) {
 		if (args.length == 1) {
 			List<String> commands = new ArrayList<>();
-			if (sender.hasPermission("heart")) {
-				if (sender.hasPermission("heart.add")) {
-					commands.add("add");
-				}
-				if (sender.hasPermission("westernstandoff.remove")) {
-					commands.add("remove");
-				}
-				return commands;
+			if (sender.hasPermission("heart.add")) {
+				commands.add("add");
 			}
+			if (sender.hasPermission("heart.remove")) {
+				commands.add("remove");
+			}
+			if (sender.hasPermission("heart.reload")) {
+				commands.add("reload");
+			}
+			if (commands.size() == 0) {
+				return null;
+			}
+			return commands;
 		}
 		return null;
 	}
