@@ -23,6 +23,7 @@ public class Events implements Listener {
 					eater.setMaxHealth(eater.getMaxHealth() + 2);
 				} else {
 					eater.sendMessage(ChatColor.RED + "You do not have permission to eat hearts");
+					e.setCancelled(true);
 				}
 			}
 		}

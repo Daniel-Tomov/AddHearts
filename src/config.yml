@@ -1,19 +1,21 @@
+---
 heart:
-  heart:
-    modelData: 6789
-    # - HIDE_ENCHANTS
-    # - HIDE_ATTRIBUTES
-    # - HIDE_UNBREAKABLE
-    # - HIDE_DESTROYS
-    # - HIDE_PLACED_ON
-    # - HIDE_POTION_EFFECTS
-    # - HIDE_DYE
-    hide: HIDE_ENCHANTS
-    displayName: 'Heart'
-    lore:
-      - "Consume this to gain an extra heart"
-      - ""
-    recipe:
+  modelData: 6789
+  hide:
+  # - HIDE_ENCHANTS
+  # - HIDE_ATTRIBUTES
+  # - HIDE_UNBREAKABLE
+  # - HIDE_DESTROYS
+  # - HIDE_PLACED_ON
+  # - HIDE_POTION_EFFECTS
+  # - HIDE_DYE
+  displayName: Heart
+  lore:
+    - "&cConsume this to gain an extra heart"
+    - ""
+  enchantments: # enchantment name followed by level
+  # - durability,1
+  recipe:
     - ""
     - ""
     - ""

@@ -6,6 +6,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="F:/Documents/Coding/Java/Minecraft_plugins/BuildTools/Builds/spigot-api-1.18-R0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/media/daniel/Documents/Documents/Coding/Java/Minecraft_plugins/BuildTools/Builds/spigot-api-1.18-R0.1-SNAPSHOT.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
