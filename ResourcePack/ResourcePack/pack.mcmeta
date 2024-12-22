@@ -1,6 +1,7 @@
 {
   "pack": {
     "pack_format": 8,
-    "description": "Add Hearts ResourcePack github.com/Daniel-Tomov"
+    "description": "Eddible Hearts ResourcePack modrinth.com/plugin/eddiblehearts",
+    "supported_formats": [4, 61]
   }
 }

@@ -7,7 +7,7 @@
 		"3": "item/heart/red",
 		"4": "item/heart/red1",
 		"5": "item/heart/red2",
-		"particle": "black"
+		"particle": "item/heart/red"
 	},
 	"elements": [
 		{
