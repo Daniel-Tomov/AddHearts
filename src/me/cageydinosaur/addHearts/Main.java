@@ -36,7 +36,7 @@ public class Main extends JavaPlugin {
 		this.remRecipe();
 	}
 
-	String chat(String s) {
+	String translateColorCode(String s) {
 		return ChatColor.translateAlternateColorCodes('&', s);
 	}
 
@@ -64,12 +64,13 @@ public class Main extends JavaPlugin {
 		if (itemsInRecipe.size() != 9) {
 			throw new RuntimeException("Wrong number of items in recipe.");
 		}
-		ItemStack item = new ItemStack(Material.SUSPICIOUS_STEW);
+		ItemStack item = new ItemStack(
+				Material.getMaterial(this.getConfig().getString(this.TOP_KEY_IN_CONFIG + ".item")));
 
 		ItemMeta meta = item.getItemMeta();
-		meta.setDisplayName(this.chat(displayName));
+		meta.setDisplayName(this.translateColorCode(displayName));
 
-		meta.setLore(lore.stream().map(x -> this.chat(x)).collect(Collectors.toList()));
+		meta.setLore(lore.stream().map(x -> this.translateColorCode(x)).collect(Collectors.toList()));
 		meta.setCustomModelData(modelDataId);
 
 		for (String h : hide) {
