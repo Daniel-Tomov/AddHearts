@@ -26,3 +26,5 @@ heart:
     - "ELYTRA"
     - "DIAMOND_BLOCK"
   item: SUSPICIOUS_STEW
+# use "<num>" to display the number of hearts the player is allowed to have.
+  GreaterThanMaxHeartsMessage: "&cYou are not allowed to have more than <num> hearts."
